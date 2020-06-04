@@ -34,4 +34,4 @@ jobs:
     - run: |
         docker build . -t acrgithubactions.azurecr.io/angularawebapp:${{ github.sha }}
         docker push acrgithubactions.azurecr.io/angularawebapp:${{ github.sha }}
-        docker push acrgithubactions.azurecr.io/angularawebapp:latest
+        docker push acrgithubactions.azurecr.io/angularawebapp
