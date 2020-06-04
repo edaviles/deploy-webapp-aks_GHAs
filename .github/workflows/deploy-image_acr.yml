@@ -1,4 +1,4 @@
-name: Deploy Image to ACR
+name: Deploy Image to ACR and AKS
 
 on:
   push:
