@@ -40,4 +40,3 @@ jobs:
       run: |
         az aks get-credentials --resource-group IaCAKS_Zone --name AKSCluterMX01
         kubectl apply -f deployment-service.yaml
-        kubectl get services -o wide
