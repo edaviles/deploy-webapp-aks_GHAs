@@ -35,3 +35,10 @@ jobs:
         docker build . -t acrgithubactions.azurecr.io/angularawebapp:${{ github.sha }}
         docker push acrgithubactions.azurecr.io/angularawebapp:${{ github.sha }}
         docker push acrgithubactions.azurecr.io/angularawebapp
+
+        # Deploy the Docker image to the IKS cluster
+    - name: Deploy to AKS
+      run: |
+        az aks get-credentials --resource-group IaCAKS_Zone --name AKSCluterMX01
+        kubectl apply -f deployment-service.yaml
+        kubectl get services -o wide
