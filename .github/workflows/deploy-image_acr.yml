@@ -32,9 +32,8 @@ jobs:
 
     # Build and Push container image
     - run: |
-        docker build . -t acrgithubactions.azurecr.io/angularawebapp:${{ github.sha }}
-        docker push acrgithubactions.azurecr.io/angularawebapp:${{ github.sha }}
-        docker push acrgithubactions.azurecr.io/angularawebapp
+        docker build . -t acrgithubactions.azurecr.io/angularawebapp:latest
+        docker push acrgithubactions.azurecr.io/angularawebapp:latest
 
         # Deploy the Docker image to the IKS cluster
     - name: Deploy to AKS

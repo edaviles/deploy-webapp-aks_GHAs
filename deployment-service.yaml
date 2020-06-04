@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: angular 
-        image: acrgithubactions.azurecr.io/angularawebapp${{ github.sha }}
+        image: acrgithubactions.azurecr.io/angularawebapp
         ports: 
         - containerPort: 80 
 --- 
