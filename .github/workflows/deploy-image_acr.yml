@@ -35,7 +35,7 @@ jobs:
         docker build . -t acrgithubactions.azurecr.io/angularawebapp:latest
         docker push acrgithubactions.azurecr.io/angularawebapp:latest
 
-        # Deploy the Docker image to the IKS cluster
+        # Deploy the Docker image to the AKS cluster
     - name: Deploy to AKS
       run: |
         az aks get-credentials --resource-group IaCAKS_Zone --name AKSCluterMX01
